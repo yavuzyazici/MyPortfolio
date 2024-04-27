@@ -4,54 +4,29 @@
 }
 
 <!DOCTYPE html>
-<!--[if lt IE 9 ]><html class="no-js oldie" lang="en"> <![endif]-->
-<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
+
 <html class="no-js" lang="en">
-<!--<![endif]-->
-<!-- <head> -->
+
 @await Component.InvokeAsync("_HeadComponentPartial")
 
 <body id="top">
 
-    <!-- header
-    ================================================== -->
     @await Component.InvokeAsync("_NavbarComponentPartial")
-    <!-- end s-header -->
 
-    <!-- home
-    ================================================== -->
-    @await Component.InvokeAsync("_HomeComponentPartial")
-    <!-- end s-home -->
+    @await Component.InvokeAsync("_FeaturesComponentPartial")
 
-    <!-- about
-    ================================================== -->
-    <section id="about" class="s-about target-section">
-
-    <!-- About-->
     @await Component.InvokeAsync("_AboutComponentPartial")
-    <!-- end about-content -->
 
-    <!-- Skills-->
-    @await Component.InvokeAsync("_SkillComponentPartial")
-
-    <!-- Experience-->        
-    @await Component.InvokeAsync("_ExperienceComponentPartial")
-
-        <!-- end about-content timeline -->
-
-    </section>
-    <!-- end about -->
-    <!-- works
-    ================================================== -->
     @await Component.InvokeAsync("_PortfolioComponentPartial")
-    <!-- end works -->
-    <!-- testimonials
-    ================================================== -->
+
     @await Component.InvokeAsync("_TestimonialComponentPartial")
-    <!-- end s-testimonials -->
-    <!-- blog
-    ================================================== -->
+
+    @await Component.InvokeAsync("_StatisticComponentPartial")
+
+    @await Component.InvokeAsync("_ContactComponentPartial")
+
+    @await Component.InvokeAsync("_FooterComponentPartial")
+
    @*  <section id="blog" class="s-blog target-section">
 
         <div class="row narrow section-intro has-bottom-sep">
@@ -139,22 +114,6 @@
         </div> <!-- end blog-content -->
 
     </section> *@ <!-- end s-blog -->
-
-
-    <!-- s-stats
-    ================================================== -->
-    @await Component.InvokeAsync("_StatisticComponentPartial")
-
-     <!-- end s-stats -->
-    <!-- contact
-    ================================================== -->
-    @await Component.InvokeAsync("_ContactComponentPartial")
-
-     <!-- end contact -->
-    <!-- footer
-    ================================================== -->
-    @await Component.InvokeAsync("_FooterComponentPartial")
-
 </body>
 
 </html>
